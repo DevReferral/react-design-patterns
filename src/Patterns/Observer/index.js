@@ -18,4 +18,6 @@ class Observable{
 
 }
 
-export default Observable;
+const observable = new Observable()
+
+export default observable;

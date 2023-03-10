@@ -1,5 +1,6 @@
-import { Button, FormControlLabel, Switch } from '@mui/material';
+
 import Counter from './Components/Counter';
+import Notifier from './Patterns/Observer/Notifier';
 import ThemeContextComponent from './Patterns/Provider';
 import Comp from './Patterns/Provider/Comp';
 import { counter } from './Patterns/Singleton/counter';
@@ -24,10 +25,10 @@ function App() {
       /*
       << Observer Pattern >>
       */
+
+      <Notifier/>
      }
-      <Button>Click me!</Button>
-      <FormControlLabel control={<Switch />} />
-      
+
     </div>
   );
 }
