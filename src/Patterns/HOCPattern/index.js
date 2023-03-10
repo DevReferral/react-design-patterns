@@ -1,22 +1,24 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 
-function withLoading(Component) {
+export default function withLoading(Component,url) {
 
   return props => {
 
      const [data, setData] = useState(null);
     
      useEffect(() =>{
-        
-      setTimeout(() =>{
-          setData(true)
-      },2000)
+       
+      axios.get(url)
+      .then((response) => setData(response.data))
+      .catch((error) =>{
+        console.error("Error",error.message)
+      })
 
      },[]);
      
-    const style = { padding: '0.2rem', margin: '10rem' ,color:"red",width:"20rem"}
     if(!data)return <div>Loading ...</div>
-    return <Component style={style} {...props} />
+    return <Component data={data} {...props} />
   }
 }
  
@@ -26,3 +28,4 @@ const Text = () => <p>Hello World!</p>
  
 export const StyledButton = withLoading(Button)
 export const StyledText = withLoading(Text)
+

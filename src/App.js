@@ -1,6 +1,7 @@
 
 import Counter from './Components/Counter';
 import { StyledButton, StyledText } from './Patterns/HOCPattern';
+import DogImages from './Patterns/HOCPattern/DogImages';
 import Notifier from './Patterns/Observer/Notifier';
 import ThemeContextComponent from './Patterns/Provider';
 import Comp from './Patterns/Provider/Comp';
@@ -30,6 +31,7 @@ function App() {
       <Notifier/>
       <StyledButton/>
       <StyledText/>
+      <DogImages/>
      
 
     </div>
