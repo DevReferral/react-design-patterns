@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Counter from './Components/Counter';
+import ThemeContextComponent from './Patterns/Provider';
+import Comp from './Patterns/Provider/Comp';
+import { counter } from './Patterns/Singleton/counter';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/*Singleton pattern application 
+     
+     When we invoke the increment method in either redButton.js or blueButton.js, the value of the counter property on the Counter instance updates in both files. It doesn't matter whether we click on the red or blue button: the same value is shared among all instances. 
+     
+     This is why the counter keeps incrementing by one, even though we're invoking the method in different files.
+
+      */}
+      <Counter counter={counter}/>
+      <Counter counter={counter}/>
+      <ThemeContextComponent>
+        <Comp/>
+      </ThemeContextComponent>
+      
     </div>
   );
 }
