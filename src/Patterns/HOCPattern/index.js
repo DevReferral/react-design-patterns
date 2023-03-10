@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-function withStyles(Component) {
-  
+function withLoading(Component) {
+
   return props => {
 
      const [data, setData] = useState(null);
@@ -14,7 +14,7 @@ function withStyles(Component) {
 
      },[]);
      
-    const style = { padding: '0.2rem', margin: '1rem' ,color:"red",}
+    const style = { padding: '0.2rem', margin: '10rem' ,color:"red",width:"20rem"}
     if(!data)return <div>Loading ...</div>
     return <Component style={style} {...props} />
   }
@@ -24,5 +24,5 @@ const Button = () => <button>Click me!</button>
 
 const Text = () => <p>Hello World!</p>
  
-export const StyledButton = withStyles(Button)
-export const StyledText = withStyles(Text)
+export const StyledButton = withLoading(Button)
+export const StyledText = withLoading(Text)
