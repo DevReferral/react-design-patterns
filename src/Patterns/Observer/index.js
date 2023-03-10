@@ -13,7 +13,7 @@ class Observable{
     }
 
     notify(data){
-       this.observers.forEach(obs => obs(data))
+       this.observers.forEach(observer => observer(data))
     }
 
 }

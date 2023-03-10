@@ -1,5 +1,6 @@
 
 import Counter from './Components/Counter';
+import { StyledButton, StyledText } from './Patterns/HOCPattern';
 import Notifier from './Patterns/Observer/Notifier';
 import ThemeContextComponent from './Patterns/Provider';
 import Comp from './Patterns/Provider/Comp';
@@ -20,14 +21,16 @@ function App() {
       <ThemeContextComponent>
         <Comp/>
       </ThemeContextComponent>
-     {
+    
 
-      /*
+     {/*
       << Observer Pattern >>
       */
-
+    }
       <Notifier/>
-     }
+      <StyledButton/>
+      <StyledText/>
+     
 
     </div>
   );
