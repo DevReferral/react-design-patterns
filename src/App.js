@@ -5,9 +5,10 @@ import DogImages from './Patterns/HOCPattern/DogImages';
 import Notifier from './Patterns/Observer/Notifier';
 import ThemeContextComponent from './Patterns/Provider';
 import Comp from './Patterns/Provider/Comp';
+import Renderer from './Patterns/RenderPattern';
+import Fahrenheit from './Patterns/RenderPattern/Fahrenheit';
 import { counter } from './Patterns/Singleton/counter';
-
-function App() {
+  function App() {
   return (
     <div>
       {/*Singleton pattern application 
@@ -31,7 +32,19 @@ function App() {
       <Notifier/>
       <StyledButton/>
       <StyledText/>
-      <DogImages/>
+      {/* <DogImages/> */}
+     
+    <Renderer 
+      render={(value)=>(
+
+          <Fahrenheit value={value}/>
+
+      ) 
+      }
+    
+    /> 
+
+
      
 
     </div>
