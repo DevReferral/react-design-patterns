@@ -1,13 +1,15 @@
 
-import Counter from './Components/Counter';
-import { StyledButton, StyledText } from './Patterns/HOCPattern';
-import DogImages from './Patterns/HOCPattern/DogImages';
-import Notifier from './Patterns/Observer/Notifier';
-import ThemeContextComponent from './Patterns/Provider';
-import Comp from './Patterns/Provider/Comp';
-import Renderer from './Patterns/RenderPattern';
-import Fahrenheit from './Patterns/RenderPattern/Fahrenheit';
-import { counter } from './Patterns/Singleton/counter';
+// import Counter from './Components/Counter';
+// import { StyledButton, StyledText } from './Patterns/HOCPattern';
+// import Notifier from './Patterns/Observer/Notifier';
+// import ThemeContextComponent from './Patterns/Provider';
+// import Comp from './Patterns/Provider/Comp';
+// import Renderer from './Patterns/RenderPattern';
+// import Fahrenheit from './Patterns/RenderPattern/Fahrenheit';
+// import { counter } from './Patterns/Singleton/counter';
+import BadDog from "./SOLID/SRP/BadDog.js";
+// import GoodDog from './SOLID/SRP/GoodDog';
+
   function App() {
   return (
     <div>
@@ -18,23 +20,25 @@ import { counter } from './Patterns/Singleton/counter';
      This is why the counter keeps incrementing by one, even though we're invoking the method in different files.
 
       */}
-      <Counter counter={counter}/>
+      {/* <Counter counter={counter}/>
       <Counter counter={counter}/>
       <ThemeContextComponent>
         <Comp/>
-      </ThemeContextComponent>
+      </ThemeContextComponent> */}
     
 
      {/*
       << Observer Pattern >>
       */
     }
-      <Notifier/>
+      {/* <Notifier/>
       <StyledButton/>
-      <StyledText/>
+      <StyledText/> */}
       {/* <DogImages/> */}
+      {/* <GoodDog/> */}
+      <BadDog/>
      
-    <Renderer 
+    {/* <Renderer 
       render={(value)=>(
 
           <Fahrenheit value={value}/>
@@ -42,7 +46,7 @@ import { counter } from './Patterns/Singleton/counter';
       ) 
       }
     
-    /> 
+    />  */}
 
 
      
